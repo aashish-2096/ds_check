@@ -22,6 +22,19 @@ void delete_node(struct Node** ref)
     free(temp);
 }
 
+void delete_end(struct Node** ref)
+{
+    struct Node* temp = *ref;
+    struct Node* prev =  NULL;
+    while(temp->next != NULL)
+    {
+        prev =temp;
+        temp =  temp->next;
+    }
+    prev->next = NULL;
+    free(temp);
+}
+
 void print_node(struct Node* head)
 {
     while(head != NULL)
@@ -82,6 +95,8 @@ int main()
     print_node(head);
     insert_at(&head,10,3);
     insert_end(&head,25);
+    print_node(head);
+    delete_end(&head);
     print_node(head);
     return 0;
 }
