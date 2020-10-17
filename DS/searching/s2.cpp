@@ -25,26 +25,7 @@ long int findPos(int ar[],int low, int high){
         }
         else
             return -1;
-        
     }
-        // if(mid != 0)
-        // {
-        //     if(ar[mid] == 1 && ar[mid-1] == 0) 
-        //     return mid;
-        //     else if(ar[mid] == 1 && ar[mid-1]  == 1)
-        //     return findPos(ar,0,mid-1);
-        //     else if(ar[mid] == 0 && ar[mid+1] == 0)
-        //     return findPos(ar,mid+1,high);
-        //     else if(ar[mid] ==0 && ar[mid+1] ==1)
-        //     return mid+1; 
-        // }
-        // else
-        // {
-        //     if(ar[mid] == 0)
-        //     return -1;
-        //     else if (ar[mid] == 1)
-        //     return 0;
-        // }
 
 }
 

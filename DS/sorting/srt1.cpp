@@ -18,9 +18,7 @@ int main(){
             }
         }
     }
-
-     for(long int i =0;i<N;i++)
-     cout<<ar[i];
-    //cout<<ar[N/2]<<endl;
+    
+    cout<<ar[N/2]<<endl;
     return 0;
 }
