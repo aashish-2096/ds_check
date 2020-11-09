@@ -26,7 +26,7 @@ int main(){
             }
             cout<<sum_max-sum_min<<endl;
         delete [] ar;
-    }
+    } 
     return 0;
 
 }
