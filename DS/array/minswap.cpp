@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Two Pointer - Sliding Window
 int main(){
     int n,k;
     cin>>n;
@@ -9,15 +10,23 @@ int main(){
         cin>>ar[i];
     }
     cin>>k;
-    int max_ = 0,min_ = 0;
+    int min_ = 0;
     for(int i=0;i<n;i++){
-        if(ar[i]>k)
-        max_++;
-        else if(ar[i]<=k){
-            if(max_!=0)
-            min_++;
-        }
+        if(ar[i]<=k)
+        min_++;
     }
-    cout<<min_<<endl;
+    int ct = 0;
+    for(int i=0;i<min_;i++){
+        if(ar[i]>k)
+            ct++;
+    }
+    int val = ct;
+    for(int i=0,j=min_;i<n-min_;i++,j++){
+        if(ar[i]>k)
+        ct--;
+        if(ar[j]>k)
+        ct++;
+    }
+    cout<<min(val,ct)<<endl;
 return 0;
 }
